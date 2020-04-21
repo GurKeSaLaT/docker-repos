@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+<Name>ssh-server</Name>
+<Beta>False</Beta>
+<Project></Project>
+<Changes>
+[center]SSH-Server[/center]
+</Changes>
+<Category>Other:</Category>
+<Overview></Overview>
+<Support></Support>
+<Description>Simple ssh-server</Description>
+<Registry></Registry>
+<Repository>gurkesalat/ssh-server</Repository>
+<BindTime>true</BindTime>
+<Privileged>false</Privileged>
+<Networking>
+    <Mode>br0.500</Mode>
+    <Publish>
+      <Port>
+        <HostPort>22</HostPort>
+        <ContainerPort>22</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+</Networking>
+<Environment>
+<Variable>
+<Name></Name>
+<Value></Value>
+</Variable>
+</Environment>
+<Data>
+<Volume>
+<HostDir></HostDir>
+<ContainerDir>/factorio</ContainerDir>
+<Mode>rw</Mode>
+</Volume>
+<Volume>
+<HostDir></HostDir>
+<ContainerDir>/scripts</ContainerDir>
+<Mode>rw</Mode>
+</Volume>
+</Data>
+<WebUI>http://[IP]:[PORT:80]/</WebUI>
+</Container>
