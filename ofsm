@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+<Name>ofsm</Name>
+<Beta>False</Beta>
+<Project></Project>
+<Changes>
+[center]Open Factoiro Server Manager[/center]
+</Changes>
+<Category>Other:</Category>
+<Overview></Overview>
+<Support></Support>
+<Description></Description>
+<Registry></Registry>
+<Repository>ofsm/ofsm</Repository>
+<BindTime>true</BindTime>
+<Privileged>false</Privileged>
+<Networking>
+    <Mode>br0.4</Mode>
+    <Publish>
+      <Port>
+        <HostPort>80</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>34197</HostPort>
+        <ContainerPort>34197</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+    </Publish>
+</Networking>
+<Environment>
+<Variable>
+<Name>FACTORIO_VERSION</Name>
+<Value>latest</Value>
+</Variable>
+<Variable>
+<Name>RCON_PASS</Name>
+<Value></Value>
+</Variable>
+</Environment>
+<Data>
+<Volume>
+<HostDir></HostDir>
+<ContainerDir>/opt/factorio/config</ContainerDir>
+<Mode>rw</Mode>
+</Volume>
+<Volume>
+<HostDir></HostDir>
+<ContainerDir>/opt/factorio/mods</ContainerDir>
+<Mode>rw</Mode>
+</Volume>
+<Volume>
+<HostDir></HostDir>
+<ContainerDir>/opt/factorio/saves</ContainerDir>
+<Mode>rw</Mode>
+</Volume>
+<Volume>
+<HostDir></HostDir>
+<ContainerDir>/opt/fsm-data</ContainerDir>
+<Mode>rw</Mode>
+</Volume>
+</Data>
+<WebUI>http://[IP]:[PORT:80]/</WebUI>
+</Container>
